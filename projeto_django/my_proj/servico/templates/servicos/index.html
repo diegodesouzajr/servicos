@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Serviço 3</title>
+    <script>
+        function pergunta_iniciar(){
+            return confirm('Tem certeza que quer iniciar o serviço?');
+        }
+    </script>
+</head>
+<body>
+    <form name='iniciar' id='iniciar' action='/servicos/iniciar_servico_tres' method='post'>
+        {% csrf_token %}
+        <h2>{{ title }}</h2>
+        <input type='submit' value='Processar' name=enviarform onclick='return pergunta_iniciar();'>
+    </form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Serviço 4</title>
+</head>
+<body>
+<h2>{{ title }}</h2>
+<p id="demo"></p>
+
+<script>
+var numeros = {{ detail_list }};
+var text = "";
+var i;
+var linha = 1;
+for (i = 0; i < 100; i++) {
+  text += linha + ' - ' +numeros[i] + "<br>";
+  linha += 1 ;
+}
+document.getElementById("demo").innerHTML = text;
+</script>
+</body>
+</html>
